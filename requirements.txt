@@ -1,0 +1,8 @@
+Django
+gunicorn
+psycopg2-binary
+python-decouple
+pillow
+asgiref
+pytz
+sqlparse

@@ -1,0 +1,18 @@
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=prod
+Group=www-data
+WorkingDirectory=/usr/jenkins/workspace/django-project/polling
+ExecStart=/usr/jenkins/workspace/django-project/env/bin/gunicorn \
+          --error-logfile /usr/jenkins/workspace/django-project/error.log \
+          --access-logfile /usr/jenkins/workspace/django-project/access.log \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          polling.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
