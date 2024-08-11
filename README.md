@@ -51,6 +51,17 @@ This project demonstrates a CI/CD pipeline for deploying a Django web applicatio
    ```bash
    ./nginx.sh
    ```
+8. **Execute next command to create the `admin user`:**
+  ```bash
+  cd CICD-Django-Webapp/polling
+  python3 manage.py createsuperuser 
+  ```
+9. **Access**
+- **Access to the application**
+   Open your browser and navigate to `http://localhost`.
+
+- **Access to admin area**
+   Open your browser and navigate to `http://localhost/admin`
    
 ### Auto Deployment with Jenkins
 1. **Jenkins Job Configuration**:
@@ -60,6 +71,18 @@ This project demonstrates a CI/CD pipeline for deploying a Django web applicatio
 2. Add the repository URL to your Jenkins server.
 3. Click `Build Now` to initiate the deployment.
 4. **Change `ALLOWED_HOSTS=<Your IP>`** in **`/usr/jenkins/workspace/django-project/polling/polling/.env`**
+5. **Execute next command to create the `admin user`:**
+  ```bash
+  cd usr/jenkins/workspace/django-project/polling
+  python3 manage.py createsuperuser 
+  ```
+6. **Access**
+- **Access to the application**
+   Open your browser and navigate to `http://localhost`.
+
+- **Access to admin area**
+   Open your browser and navigate to `http://localhost/admin`
+   
 
 ## CI/CD Pipeline
 
