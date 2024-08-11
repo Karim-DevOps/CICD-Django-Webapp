@@ -51,9 +51,12 @@ This project demonstrates a CI/CD pipeline for deploying a Django web applicatio
    ```
 
 ### Auto Deployment with Jenkins
-
-1. Add the repository URL to your Jenkins server.
-2. Click `Build Now` to initiate the deployment.
+1. **Jenkins Job Configuration**:
+   - **Job Name**: `django-project`
+   - **Root Directory for Jenkins Workspace**: `/usr/jenkins/workspace/`
+   - **Full Path**: `/usr/jenkins/workspace/django-project/`
+2. Add the repository URL to your Jenkins server.
+3. Click `Build Now` to initiate the deployment.
 
 ## CI/CD Pipeline
 
@@ -62,8 +65,4 @@ This project demonstrates a CI/CD pipeline for deploying a Django web applicatio
 ## Feedback
 
 We welcome your feedback! Feel free to submit issues, leave comments, or ask questions about the project.
-
-
-
-
 

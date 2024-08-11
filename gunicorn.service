@@ -4,7 +4,7 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
-User=prod
+User=$USER
 Group=www-data
 WorkingDirectory=/usr/jenkins/workspace/django-project/polling
 ExecStart=/usr/jenkins/workspace/django-project/env/bin/gunicorn \

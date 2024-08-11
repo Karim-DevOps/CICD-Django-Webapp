@@ -6,12 +6,7 @@ cd /usr/jenkins/workspace/django-project/polling
 
 python3 manage.py makemigrations
 python3 manage.py migrate
-sudo rm -rf static/
-python3 manage.py collectstatic
-
-#sudo apt install expect -y
-#sudo chmod +x *.sh
-#./createsuperuser.sh
+python3 manage.py collectstatic --noinput
 
 cd /usr/jenkins/workspace/django-project
 
