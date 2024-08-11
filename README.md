@@ -29,27 +29,29 @@ This project demonstrates a CI/CD pipeline for deploying a Django web applicatio
    git clone https://github.com/Karim-DevOps/CICD-Django-Webapp.git
    cd CICD-Django-Webapp
    ```
-2. **Give Execute Permission to Scripts**
+2. **Change `ALLOWED_HOSTS=<Your IP>`** in `CICD-Django-Webapp/polling/polling/.env`
+
+3. **Give Execute Permission to Scripts**
    ```bash
    sudo chmod +x *.sh
    ```
-3. **Create Database**
+4. **Create Database**
    ```bash
    ./DB-postgresql.sh
    ```
-4. **Set Up Python Virtual Environment**
+5. **Set Up Python Virtual Environment**
    ```bash
    ./envsetup.sh
    ```
-5. **Set Up Gunicorn Service**
+6. **Set Up Gunicorn Service**
    ```bash
    ./gunicorn.sh
    ```
-6. **Set Up Nginx**
+7. **Set Up Nginx**
    ```bash
    ./nginx.sh
    ```
-
+   
 ### Auto Deployment with Jenkins
 1. **Jenkins Job Configuration**:
    - **Job Name**: `django-project`
@@ -57,6 +59,7 @@ This project demonstrates a CI/CD pipeline for deploying a Django web applicatio
    - **Full Path**: `/usr/jenkins/workspace/django-project/`
 2. Add the repository URL to your Jenkins server.
 3. Click `Build Now` to initiate the deployment.
+4. **Change `ALLOWED_HOSTS=<Your IP>`** in `CICD-Django-Webapp/polling/polling/.env`
 
 ## CI/CD Pipeline
 
