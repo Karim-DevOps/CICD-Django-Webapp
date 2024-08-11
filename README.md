@@ -4,16 +4,15 @@
 
 This project demonstrates a CI/CD pipeline for deploying a Django web application using bash scripts, Jenkins, and Gunicorn. It includes the setup of services and configuration for a seamless transition from development to production environments.
 
-## Project Structure
+## Project Structured with Bash Scripts
 
 1. **Database**: PostgreSQL
+   - `DB-postgresql.sh`: Sets up and configures PostgreSQL Database
 2. **Polling Demo Project**
-   - **Bash Scripts**:
-     - `envsetup.sh`: Sets up and configures the Python virtual environment.
-     - `gunicorn.sh`: Sets up and configures the Gunicorn service.
-     - `nginx.sh`: Configures Nginx to forward requests from the Gunicorn service.
+   - `envsetup.sh`: Sets up and configures the Python virtual environment.
+   - `gunicorn.sh`: Sets up and configures the Gunicorn service.
 3. **Web Server**:
-   - **Nginx**: Configured to manage web traffic and forward requests.
+   - `nginx.sh`: Configures Nginx to forward requests from Gunicorn service.
 
 ## Prerequisites
 
