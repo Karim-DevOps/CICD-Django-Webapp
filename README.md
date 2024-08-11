@@ -59,7 +59,7 @@ This project demonstrates a CI/CD pipeline for deploying a Django web applicatio
    - **Full Path**: `/usr/jenkins/workspace/django-project/`
 2. Add the repository URL to your Jenkins server.
 3. Click `Build Now` to initiate the deployment.
-4. **Change `ALLOWED_HOSTS=<Your IP>`** in **`/usr/jenkins/workspace/django-project/polling/polling.env`**
+4. **Change `ALLOWED_HOSTS=<Your IP>`** in **`/usr/jenkins/workspace/django-project/polling/polling/.env`**
 
 ## CI/CD Pipeline
 
